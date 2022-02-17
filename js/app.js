@@ -1,6 +1,6 @@
-// income and total expenses
+// accessing id using function
 
-function getCost(incomeId) {
+function getId(incomeId) {
 
 
     const income = document.getElementById(incomeId);
@@ -10,32 +10,43 @@ function getCost(incomeId) {
 
 }
 
+// getting total cost using function 
+
+function getTotalCost() {
+    const rent = document.getElementById('rent');
+    const food = document.getElementById('food');
+    const clothes = document.getElementById('clothes');
+
+
+
+
+
+    let totalCost = parseInt(rent.value) + parseInt(food.value) + parseInt(clothes.value);
+    const totalExpense = document.getElementById('expense');
+
+    totalExpense.innerText = totalCost;
+    return totalCost;
+}
 
 // getting income and total expenses calling function
 
 document.getElementById('calculate').addEventListener('click', function() {
 
+
+
     // calling function
-    const totalIncome = getCost('total-income');
-    const balance = getCost('balance');
+    const totalIncome = getId('total-income');
+    const balance = getId('balance');
+    const totalExpense = getId('expense');
+    getTotalCost();
 
 
 
-
-
-    const rent = document.getElementById('rent');
-    const food = document.getElementById('food');
-    const clothes = document.getElementById('clothes');
-
-    let totalCost = parseInt(rent.value) + parseInt(food.value) + parseInt(clothes.value);
-
-
-    const totalExpense = document.getElementById('expense');
-
-    totalExpense.innerText = totalCost;
 
 
     balance.innerText = totalIncome.value - totalExpense.innerText;
+
+
 
 
 
@@ -46,8 +57,8 @@ document.getElementById('calculate').addEventListener('click', function() {
 // savings 
 document.getElementById('savings').addEventListener('click', function() {
 
-    const totalIncome = getCost('total-income');
-    const balance = getCost('balance');
+    const totalIncome = getId('total-income');
+    const balance = getId('balance');
     const savingAmount = document.getElementById('save');
 
 
