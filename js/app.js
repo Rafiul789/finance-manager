@@ -60,9 +60,10 @@ document.getElementById('calculate').addEventListener('click', function() {
 document.getElementById('savings').addEventListener('click', function() {
 
     const totalIncome = getId('total-income');
-    const balance = getId('balance');
+    let balance = getId('balance');
+    let getBalance = parseInt(balance);
     const savingAmount = document.getElementById('save');
-    if (savingAmount > balance) {
+    if (savingAmount.value > getBalance) {
         alert('you can not save more than your balance');
     } else {
         const saving = document.getElementById('saving-amount');
