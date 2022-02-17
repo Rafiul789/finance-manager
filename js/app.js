@@ -1,7 +1,23 @@
 // income and total expenses
 
-function getCost() {
-    const totalIncome = document.getElementById('total-income');
+function getCost(incomeId) {
+
+
+    const income = document.getElementById(incomeId);
+    return income
+
+
+
+}
+
+
+// getting income and total expenses calling function
+
+document.getElementById('calculate').addEventListener('click', function() {
+
+    // calling function
+    const totalIncome = getCost('total-income');
+    const balance = getCost('balance');
 
 
 
@@ -17,19 +33,9 @@ function getCost() {
     const totalExpense = document.getElementById('expense');
 
     totalExpense.innerText = totalCost;
-    const balance = document.getElementById('balance');
+
 
     balance.innerText = totalIncome.value - totalExpense.innerText;
-
-
-}
-
-
-// getting income and total expenses calling function
-
-document.getElementById('calculate').addEventListener('click', function() {
-
-    getCost();
 
 
 
@@ -40,16 +46,17 @@ document.getElementById('calculate').addEventListener('click', function() {
 // savings 
 document.getElementById('savings').addEventListener('click', function() {
 
-
+    const totalIncome = getCost('total-income');
+    const balance = getCost('balance');
     const savingAmount = document.getElementById('save');
-    const totalIncome = document.getElementById('total-income');
+
 
     const saving = document.getElementById('saving-amount');
     const totalSaving = (savingAmount.value * totalIncome.value) / 100;
     saving.innerText = totalSaving;
 
     const remainingAmount = document.getElementById('remaining-balance');
-    const balance = document.getElementById('balance');
+
 
 
     remainingAmount.innerText = balance.innerText - saving.innerText;
