@@ -31,5 +31,7 @@ document.getElementById('savings').addEventListener('click', function() {
 
     const remainingAmount = document.getElementById('remaining-balance');
     const balance = document.getElementById('balance');
-    remainingAmount.innerText = balance - totalSaving;
+
+
+    remainingAmount.innerText = balance.innerText - saving.innerText;
 })
