@@ -36,7 +36,7 @@
 
 
 
-            <form class="grid grid-cols-1 bg-gray-300 px-4">
+            <form class="grid grid-cols-1 bg-gray-300 px-4  ">
                 <h1 class="text-3xl text-center  my-5">Income</h1>
                 <div> <label> 
                     Income:
@@ -54,14 +54,25 @@
                         </label> <input id="clothes" class="  bg-gray-100 border border-gray-300 rounded" type="number" value="0"> </div>
 
                 </div>
-                <div class="items-center justify-center"> <button id="calculate" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded items-center" type="button">
+                <div class="items-center justify-center calculate-button  "> <button id="calculate" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded items-center   " type="button">
                     Calculate
                   </button> </div>
                 <h1 class="text-3xl text-center  my-5">Total Expenses: $<span id="expense">0000</span></h1>
 
                 <h1 class="text-3xl text-center  my-5">Balance:$ <span id="balance">0000</span></h1>
 
-
+                <div class="mt-5 mx-auto">
+                    <div class="saving  "> <label> 
+    Save:
+</label> <input id="save" class="  bg-gray-100 border border-gray-300 rounded mx-2" type="number" value="0"> %<button id="savings" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded items-center mx-2  " type="button">
+Save
+</button>
+                        <h1 class="text-3xl text-center  my-5">Saving Amount:$ <span id="saving-amount">0000</span></h1>
+                    </div>
+                    </button>
+                    <h1 class="text-3xl text-center  my-5">Remaining Balance:$ <span id="remaining-balance">0000</span></h1>
+                </div>
+                </div>
             </form>
 
 

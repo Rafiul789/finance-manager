@@ -19,3 +19,17 @@ document.getElementById('calculate').addEventListener('click', function() {
 
 
 })
+
+document.getElementById('savings').addEventListener('click', function() {
+
+    const savingAmount = document.getElementById('save');
+    const totalIncome = document.getElementById('total-income');
+
+    const saving = document.getElementById('saving-amount');
+    const totalSaving = (savingAmount.value * totalIncome.value) / 100;
+    saving.innerText = totalSaving;
+
+    const remainingAmount = document.getElementById('remaining-balance');
+    const balance = document.getElementById('balance');
+    remainingAmount.innerText = balance - totalSaving;
+})
